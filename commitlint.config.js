@@ -1,35 +1,107 @@
-const pkg = require('./package.json');
+import {
+    RuleConfigCondition,
+    RuleConfigSeverity,
+    TargetCaseType,
+} from '@commitlint/types';
 
-// Check if the user has configured the package to use conventional commits.
-const isConventional = pkg.config
-  ? pkg.config['cz-emoji']?.conventional
-  : false;
-
-// Regex for default and conventional commits.
-const RE_DEFAULT_COMMIT =
-  /^(?::.*:|(?:\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]))\s(?<emoji>\((?<scope>.*)\)\s)?.*$/gm;
-const RE_CONVENTIONAL_COMMIT =
-  /^^(?<type>\w+)(?:\((?<scope>\w+)\))?\s(?<emoji>:.*:|(?:\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]))\s.*$/gm;
-
-module.exports = {
-  rules: {
-    'cz-emoji': [2, 'always'],
-  },
-  plugins: [
-    {
-      rules: {
-        'cz-emoji': ({ raw }) => {
-          const isValid = isConventional
-            ? RE_CONVENTIONAL_COMMIT.test(raw)
-            : RE_DEFAULT_COMMIT.test(raw);
-
-          const message = isConventional
-            ? `Your commit message should follow conventional commit format.`
-            : `Your commit message should be: <emoji> (<scope>)?: <subject>`;
-
-          return [isValid, message];
-        },
-      },
-    },
-  ],
+export default {
+    extends: ['gitmoji'],
+    parserPreset: '@gitmoji/parser-opts',
+    rules: {
+        'body-leading-blank': [RuleConfigSeverity.Warning, 'always'] as const,
+        //not setting any max-line-length since we are writing release-notes 
+        //in our chore(release) commit messages. @see release.config.ts '@semantic-release/git' configurations.
+        //'body-max-line-length': [RuleConfigSeverity.Error, 'always', 100] as const,
+        'footer-leading-blank': [RuleConfigSeverity.Warning, 'always'] as const,
+        // 'footer-max-line-length': [
+        //     RuleConfigSeverity.Error,
+        //     'always',
+        //     100,
+        // ] as const,
+        'header-max-length': [RuleConfigSeverity.Error, 'always', 100] as const,
+        'header-trim': [RuleConfigSeverity.Error, 'always'] as const,
+        'subject-case': [
+            RuleConfigSeverity.Error,
+            'never',
+            ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
+        ] as [RuleConfigSeverity, RuleConfigCondition, TargetCaseType[]],
+        'subject-empty': [RuleConfigSeverity.Error, 'never'] as const,
+        'subject-full-stop': [RuleConfigSeverity.Error, 'never', '.'] as const,
+        'type-case': [RuleConfigSeverity.Error, 'always', 'lower-case'] as const,
+        'type-empty': [RuleConfigSeverity.Error, 'never'] as const,
+        'type-enum': [
+            RuleConfigSeverity.Error,
+            'always',
+            [
+              'style',
+              'perf',
+              'prune',
+              'fix',
+              'quickfix',
+              'feature',
+              'docs',
+              'deploy',
+              'ui',
+              'init',
+              'test',
+              'security',
+              'release',
+              'lint',
+              'wip',
+              'fix-ci',
+              'downgrade',
+              'upgrade',
+              'pushpin',
+              'ci',
+              'analytics',
+              'refactoring',
+              'dep-add',
+              'dep-rm',
+              'config',
+              'i18n',
+              'typo',
+              'poo',
+              'revert',
+              'merge',
+              'dep-up',
+              'compat',
+              'mv',
+              'license',
+              'breaking',
+              'assets',
+              'access',
+              'docs-code',
+              'beer',
+              'texts',
+              'db',
+              'log-add',
+              'log-rm',
+              'contrib-add',
+              'ux',
+              'arch',
+              'iphone',
+              'clown-face',
+              'egg',
+              'see-no-evil',
+              'camera-flash',
+              'experiment',
+              'seo',
+              'types',
+              'seed',
+              'flags',
+              'animation',
+              'wastebasket',
+              'passport-control',
+              'adhesive-bandage',
+              'monocle-face',
+              'coffin',
+              'test-tube',
+              'necktie',
+              'stethoscope',
+              'bricks',
+              'technologist',
+              'chore',
+            ],
+        ] as [RuleConfigSeverity, RuleConfigCondition, string[]],
+    }
 };
