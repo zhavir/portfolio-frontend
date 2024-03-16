@@ -1,9 +1,8 @@
 /* eslint-disable no-template-curly-in-string */
 
-import dateFormat from 'dateformat';
-import { promisify } from 'util';
-import { readFile } from 'fs';
-
+const dateFormat = require('dateformat');
+const promisify = require('util');
+const readFile = require('fs');
 const readFileAsync = promisify(readFile);
 
 // the *.hbs template and partials should be passed as strings of contents
