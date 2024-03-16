@@ -6,15 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --fix",
     "prettier": "npx prettier . --write",
-    "prettier-check": "npx prettier . --check",
-    "prepare": "husky"
+    "check": "npx prettier . --check && next lint",
+    "prepare": "husky",
+    "precommit": "npx prettier . --write && npm run lint"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "axios": "^1.6.7",
     "framer-motion": "^11.0.8",
+    "husky": "^9.0.11",
     "next": "14.1.1",
     "noisejs": "^2.1.0",
     "react": "^18",
@@ -28,7 +30,6 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.1",
-    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8",
     "prettier": "3.2.5",
@@ -38,8 +39,19 @@
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    "@semantic-release/github",
-    "@semantic-release/npm",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false,
+        "tarballDir": "dist"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": "dist/*.tgz"
+      }
+    ],
     "@semantic-release/git"
   ],
   "release": {
@@ -60,5 +72,10 @@
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   }
 }

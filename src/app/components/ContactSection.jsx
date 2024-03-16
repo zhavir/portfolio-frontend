@@ -15,6 +15,7 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
+    /*
     const endpoint = '';
     const options = {
       method: 'POST',
@@ -23,11 +24,12 @@ const EmailSection = () => {
       },
       body: JSONdata,
     };
-    //const response = await fetch(endpoint, options);
-    //const resData = await response.json();
-    //console.log(resData);
-    //if (response.status === 200) {
-    //console.log('Message sent');
+    const response = await fetch(endpoint, options);
+    const resData = await response.json();
+    console.log(resData);
+    if (response.status === 200) {
+    */
+    console.log(`Message sent ${JSONdata}`);
     setEmailSubmitted(true);
     //}
   };

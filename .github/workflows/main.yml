@@ -18,8 +18,8 @@ jobs:
           node-version: 21
       - name: Install dependencies
         run: npm install
-      - name: Check indentation
-        run: npm run prettier-check
+      - name: Check indentation and lint
+        run: npm run check
       - name: Build app
         run: npm run build
       - name: Semantic release
