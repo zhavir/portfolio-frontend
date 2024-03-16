@@ -43,6 +43,7 @@
     "@semantic-release/git"
   ],
   "release": {
+    "repositoryUrl": "https://github.com/zhavir/portfolio-frontend.git",
     "branches": [
       "main"
     ],
