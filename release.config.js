@@ -5,8 +5,7 @@ const dateFormat = require('dateformat');
 const path = require('path');
 const readFileAsync = promisify(require('fs').readFile);
 
-const template = readFileAsync(path.join('build', 'default-template.hbs'));
-const commitTemplate = readFileAsync(path.join('build', 'commit-template.hbs'));
+const template = readFileAsync(path.join('build', 'release-notes.hbs'));
 
 module.exports = {
   plugins: [
@@ -20,7 +19,6 @@ module.exports = {
         },
         releaseNotes: {
           template,
-          partials: { commitTemplate },
           helpers: {
             datetime: function (format = 'UTC:yyyy-mm-dd') {
               return dateFormat(new Date(), format);
