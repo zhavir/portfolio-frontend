@@ -1,44 +1,53 @@
+// in ".releaserc.js" or "release.config.js"
+
+const { promisify } = require('util');
+const dateFormat = require('dateformat');
 const path = require('path');
-const fs = require('fs');
+const readFileAsync = promisify(require('fs').readFile);
 
-const tplFile = path.resolve(__dirname, 'build/release-notes.hbs');
+const template = readFileAsync(path.join('build', 'default-template.hbs'));
+const commitTemplate = readFileAsync(path.join('build', 'commit-template.hbs'));
 
-export const branches = ['main'];
-export const plugins = [
-  [
-    'semantic-release-gitmoji',
-    {
-      releaseRules: {
-        patch: {
-          include: [':bento:', ':arrow_up:', ':lock:'],
+module.exports = {
+  plugins: [
+    [
+      'semantic-release-gitmoji',
+      {
+        releaseRules: {
+          major: [':boom:'],
+          minor: [':sparkles:'],
+          patch: [':bug:', ':ambulance:', ':lock:'],
+        },
+        releaseNotes: {
+          template,
+          partials: { commitTemplate },
+          helpers: {
+            datetime: function (format = 'UTC:yyyy-mm-dd') {
+              return dateFormat(new Date(), format);
+            },
+          },
+          issueResolution: {
+            template: '{baseUrl}/{owner}/{repo}/issues/{ref}',
+            baseUrl: 'https://github.com',
+            source: 'github.com',
+            removeFromCommit: false,
+            regex: /#\d+/g,
+          },
         },
       },
-      releaseNotes: {
-        template: fs.readFileSync(tplFile, 'utf-8'),
+    ],
+    [
+      '@semantic-release/npm',
+      {
+        npmPublish: false,
+        tarballDir: 'dist',
       },
-    },
+    ],
+    [
+      '@semantic-release/github',
+      {
+        assets: 'dist/*.tgz',
+      },
+    ],
   ],
-  [
-    '@semantic-release/npm',
-    {
-      npmPublish: false,
-      tarballDir: 'dist',
-    },
-  ],
-  [
-    '@semantic-release/github',
-    {
-      assets: 'dist/*.tgz',
-    },
-  ],
-  [
-    '@semantic-release/git',
-    {
-      message: [
-        ':bookmark: v${nextRelease.version} [skip ci]',
-        '',
-        'https://github.com/zhavir/portfolio-frontend/releases/tag/${nextRelease.gitTag}',
-      ].join('\n'),
-    },
-  ],
-];
+};
