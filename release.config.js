@@ -5,7 +5,9 @@ const dateFormat = require('dateformat');
 const path = require('path');
 const readFileAsync = promisify(require('fs').readFile);
 
-const template = readFileAsync(path.join('build', 'release-notes.hbs'));
+const template = readFileAsync(
+  path.resolve(__dirname, 'build/release-notes.hbs'),
+);
 
 module.exports = {
   plugins: [
