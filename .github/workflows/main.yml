@@ -9,8 +9,6 @@ permissions:
   contents: write
 
 jobs:
-  permissions:
-    contents: write
   publish:
     runs-on: ubuntu-latest
     steps:
