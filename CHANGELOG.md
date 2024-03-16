@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/zhavir/portfolio-frontend/compare/v1.0.0...v1.0.1) (2024-03-16)
+
+
+### Bug Fixes
+
+* fix linting ([351da57](https://github.com/zhavir/portfolio-frontend/commit/351da574ac1f3609d3d8c19fdd4ba464e5fa0a62))
+
 # 1.0.0 (2024-03-16)
 
 
