@@ -1,7 +1,7 @@
-import { resolve } from 'path';
-import { readFileSync } from 'fs';
+const path = require('path');
+const fs = require('fs');
 
-const tplFile = resolve(__dirname, 'build/release-notes.hbs');
+const tplFile = path.resolve(__dirname, 'build/release-notes.hbs');
 
 export const branches = ['main'];
 export const plugins = [
@@ -14,7 +14,7 @@ export const plugins = [
         },
       },
       releaseNotes: {
-        template: readFileSync(tplFile, 'utf-8'),
+        template: fs.readFileSync(tplFile, 'utf-8'),
       },
     },
   ],
