@@ -18,7 +18,7 @@ if (process.env.GITHUB_ACTIONS) {
     ':construction_worker: chore(release): ${nextRelease.version} [skip ci]';
 }
 
-const config = {
+module.exports = {
   release: {
     defaultBranch: 'main',
     branches: [
@@ -177,5 +177,3 @@ const config = {
   ],
   extends: ['semantic-release-config-gitmoji'],
 };
-
-export default config;
