@@ -177,5 +177,3 @@ const config = {
   ],
   extends: ['semantic-release-config-gitmoji'],
 };
-
-export default config;
