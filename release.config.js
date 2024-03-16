@@ -1,8 +1,9 @@
 /* eslint-disable no-template-curly-in-string */
 
-const dateFormat = require('dateformat');
-const promisify = require('util');
-const readFile = require('fs');
+import dateFormat from 'dateformat';
+import promisify from 'util';
+import readFile from 'fs';
+
 const readFileAsync = promisify(readFile);
 
 // the *.hbs template and partials should be passed as strings of contents
@@ -18,7 +19,7 @@ if (process.env.GITHUB_ACTIONS) {
     ':construction_worker: chore(release): ${nextRelease.version} [skip ci]';
 }
 
-const config = {
+module.exports = {
   release: {
     defaultBranch: 'main',
     branches: [
