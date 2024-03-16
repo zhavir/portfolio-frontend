@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="text-primaryText mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold ">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-400 ">
-              Hello I'm{' '}
+              {`Hello I'm`}{' '}
             </span>
             <br></br>
             <TypeAnimation
@@ -31,7 +31,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-secondaryText text-base sm:text-lg mb-6 lg:text-xl mr-10">
-            I'm a Softwere engineer with 10 years of experience
+            {`I'm a Softwere engineer with 10 years of experience`}
           </p>
           <div>
             <Link

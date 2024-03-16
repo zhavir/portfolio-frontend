@@ -39,10 +39,10 @@ const EmailSection = () => {
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-600 to-transparent rounded-full h-2/3 w-6/12 z-0 blur-3xl absolute top-1/3 -left-4 transform -translate-x-1/2 -translate-y-1/2"></div>
       <div className="z-0">
         <h5 className="text-xl font-bold text-primaryText my-2">
-          Let's Connect
+          {`Let's Connect`}
         </h5>
         <p className="text-secondaryText mb-4 max-w-md">
-          Reach me out if you're interested!
+          {`Reach me out if you're interested!`}
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/zhavir" target="_blank">
