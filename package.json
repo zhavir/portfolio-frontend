@@ -97,8 +97,5 @@
   "homepage": "https://github.com/zhavir/portfolio-frontend#readme",
   "publishConfig": {
     "access": "restricted"
-  },
-  "extends": [
-    "semantic-release-config-gitmoji"
-  ]
+  }
 }
