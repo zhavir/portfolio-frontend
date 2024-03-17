@@ -1,25 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { Noise } from 'noisejs';
-import AWSIcon from '../../../public/logos/aws.svg';
-import DockerIcon from '../../../public/logos/docker.svg';
-import JavascriptIcon from '../../../public/logos/javascript.svg';
-import MongodbIcon from '../../../public/logos/mongodb.svg';
-import PostgresIcon from '../../../public/logos/postgres.svg';
-import PythonIcon from '../../../public/logos/python.svg';
-import TypescriptIcon from '../../../public/logos/typescript.svg';
-import RedisIcon from '../../../public/logos/redis.svg';
-import KubernetesIcon from '../../../public/logos/kubernetes.svg';
-import DjangoIcon from '../../../public/logos/django.svg';
-import GitIcon from '../../../public/logos/git.svg';
-import JenkinsIcon from '../../../public/logos/jenkins.svg';
-import ScrumIcon from '../../../public/logos/scrum.svg';
-import KafkaIcon from '../../../public/logos/kafka.svg';
-import SparkIcon from '../../../public/logos/spark.svg';
-import HTMLIcon from '../../../public/logos/html.svg';
-import DevOpsIcon from '../../../public/logos/devops.svg';
-import GraphQLIcon from '../../../public/logos/graphql.svg';
-import NextJSIcon from '../../../public/logos/nextjs.svg';
 import Bouble from './Bouble';
 import { randomNoRepeats } from '../lib/utilis';
 
@@ -199,25 +180,25 @@ const bubbles = [
   },
 ];
 var backgroundImages = randomNoRepeats([
-  AWSIcon,
-  DockerIcon,
-  JavascriptIcon,
-  MongodbIcon,
-  PostgresIcon,
-  PythonIcon,
-  TypescriptIcon,
-  RedisIcon,
-  KubernetesIcon,
-  DjangoIcon,
-  GitIcon,
-  JenkinsIcon,
-  ScrumIcon,
-  KafkaIcon,
-  SparkIcon,
-  HTMLIcon,
-  DevOpsIcon,
-  GraphQLIcon,
-  NextJSIcon,
+  '/logos/aws.svg',
+  '/logos/docker.svg',
+  '/logos/javascript.svg',
+  '/logos/mongodb.svg',
+  '/logos/postgres.svg',
+  '/logos/python.svg',
+  '/logos/typescript.svg',
+  '/logos/redis.svg',
+  '/logos/kubernetes.svg',
+  '/logos/django.svg',
+  '/logos/git.svg',
+  '/logos/jenkins.svg',
+  '/logos/scrum.svg',
+  '/logos/kafka.svg',
+  '/logos/spark.svg',
+  '/logos/html.svg',
+  '/logos/devops.svg',
+  '/logos/graphql.svg',
+  '/logos/nextjs.svg',
 ]);
 
 const SkillSection = () => {
