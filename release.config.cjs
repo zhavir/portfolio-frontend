@@ -168,7 +168,7 @@ module.exports = {
       {
         assets: [
           {
-            path: 'dist/**',
+            path: 'out/**',
           },
         ],
       },
