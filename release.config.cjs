@@ -11,7 +11,7 @@ const template = readFileAsync(
   path.resolve(__dirname, 'templates', 'release-notes.hbs'),
 );
 const commitTemplate = readFileAsync(
-  path.resolve(__dirname, 'templates', '.build/commit-template.hbs'),
+  path.resolve(__dirname, 'templates', 'commit-template.hbs'),
 );
 let choreMessage = '';
 if (process.env.GITHUB_ACTIONS) {
