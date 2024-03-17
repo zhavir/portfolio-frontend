@@ -1,3 +1,44 @@
+# Changelog
+
+# [v1.0.2](https://github.com/zhavir/portfolio-frontend/compare/v1.0.1...v1.0.2) (Sun Mar 17 2024 00:59:22 GMT+0000 (Coordinated Universal Time))
+
+## 🐛 Fixing a bug
+- [`b323717`](https://github.com/zhavir/portfolio-frontend/commit/b323717)  introduce emoji commit 
+
+## 🚀 Deploying stuff
+- [`1d86db2`](https://github.com/zhavir/portfolio-frontend/commit/1d86db2)  fix semver 
+- [`2b77c3c`](https://github.com/zhavir/portfolio-frontend/commit/2b77c3c)  fix release config 
+- [`cb89578`](https://github.com/zhavir/portfolio-frontend/commit/cb89578)  fix semver 
+- [`f83faa6`](https://github.com/zhavir/portfolio-frontend/commit/f83faa6)  fix semver config 
+- [`4f6a529`](https://github.com/zhavir/portfolio-frontend/commit/4f6a529)  deploy(infrastructure): 
+- [`a940d59`](https://github.com/zhavir/portfolio-frontend/commit/a940d59)  deploy(infrastructure): fix deploy 
+- [`5a4d003`](https://github.com/zhavir/portfolio-frontend/commit/5a4d003)  deploy(deployment): fix deployment 
+- [`5ee7e09`](https://github.com/zhavir/portfolio-frontend/commit/5ee7e09)  deploy(deployment): fix deploy 
+- [`823f38e`](https://github.com/zhavir/portfolio-frontend/commit/823f38e)  deploy(deployment): fix deploy 
+- [`f3cd77c`](https://github.com/zhavir/portfolio-frontend/commit/f3cd77c)  deploy(deployment): fix deploy 
+- [`d5ef264`](https://github.com/zhavir/portfolio-frontend/commit/d5ef264)  deploy: deploy 
+- [`f08b2ef`](https://github.com/zhavir/portfolio-frontend/commit/f08b2ef)  deploy: fix 
+- [`6f62194`](https://github.com/zhavir/portfolio-frontend/commit/6f62194)  deploy: fix 
+- [`47c6eae`](https://github.com/zhavir/portfolio-frontend/commit/47c6eae)  deploy: fix 
+- [`8287d85`](https://github.com/zhavir/portfolio-frontend/commit/8287d85)  deploy: fix 
+- [`f96fd28`](https://github.com/zhavir/portfolio-frontend/commit/f96fd28)  deploy: fix 
+- [`d96f916`](https://github.com/zhavir/portfolio-frontend/commit/d96f916)  deploy: fix 
+- [`a61be86`](https://github.com/zhavir/portfolio-frontend/commit/a61be86)  deploy: fix 
+- [`c362587`](https://github.com/zhavir/portfolio-frontend/commit/c362587)  deploy: fix 
+- [`719a39d`](https://github.com/zhavir/portfolio-frontend/commit/719a39d)  deploy: fix 
+- [`46d2c50`](https://github.com/zhavir/portfolio-frontend/commit/46d2c50)  deploy: fix 
+- [`43e0594`](https://github.com/zhavir/portfolio-frontend/commit/43e0594)  deploy: fix 
+- [`f84e8ca`](https://github.com/zhavir/portfolio-frontend/commit/f84e8ca)  deploy: fix 
+- [`caa7071`](https://github.com/zhavir/portfolio-frontend/commit/caa7071)  deploy: fix 
+- [`e8984a3`](https://github.com/zhavir/portfolio-frontend/commit/e8984a3)  deploy: fix 
+- [`a642f9c`](https://github.com/zhavir/portfolio-frontend/commit/a642f9c)  deploy: fix 
+- [`5b1e6ff`](https://github.com/zhavir/portfolio-frontend/commit/5b1e6ff)  deploy: fix 
+- [`25d8871`](https://github.com/zhavir/portfolio-frontend/commit/25d8871)  deploy: fix 
+- [`473903e`](https://github.com/zhavir/portfolio-frontend/commit/473903e)  deploy: fix 
+- [`75c474e`](https://github.com/zhavir/portfolio-frontend/commit/75c474e)  deploy: fix 
+- [`cd4b990`](https://github.com/zhavir/portfolio-frontend/commit/cd4b990)  deploy: fix 
+- [`6d7611c`](https://github.com/zhavir/portfolio-frontend/commit/6d7611c)  deploy: fix
+
 ## [1.0.1](https://github.com/zhavir/portfolio-frontend/compare/v1.0.0...v1.0.1) (2024-03-16)
 
 
