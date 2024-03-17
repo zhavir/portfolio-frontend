@@ -133,7 +133,9 @@ module.exports = {
           partials: { commitTemplate },
           helpers: {
             datetime(format = 'UTC:yyyy-mm-dd') {
-              return import('dateformat').then((module) => {module.dateFormat(new Date(), format)});
+              return import('dateformat').then((module) => {
+                module.dateFormat(new Date(), format);
+              });
             },
           },
           issueResolution: {
