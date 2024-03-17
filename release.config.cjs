@@ -8,10 +8,10 @@ const readFileAsync = util.promisify(fs.readFile);
 
 // the *.hbs template and partials should be passed as strings of contents
 const template = readFileAsync(
-  path.resolve(__dirname, '..', 'build', 'release-notes.hbs'),
+  path.resolve(__dirname, 'templates', 'release-notes.hbs'),
 );
 const commitTemplate = readFileAsync(
-  path.resolve(__dirname, '..', 'build', '.build/commit-template.hbs'),
+  path.resolve(__dirname, 'templates', '.build/commit-template.hbs'),
 );
 let choreMessage = '';
 if (process.env.GITHUB_ACTIONS) {
