@@ -1,6 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
 
-const dateFormat = import('dateformat');
 const path = require('path');
 const util = require('util');
 const fs = require('fs');
@@ -134,7 +133,7 @@ module.exports = {
           partials: { commitTemplate },
           helpers: {
             datetime(format = 'UTC:yyyy-mm-dd') {
-              return dateFormat(new Date(), format);
+              return import('dateformat').then((module) => {module.dateFormat(new Date(), format)});
             },
           },
           issueResolution: {
