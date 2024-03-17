@@ -131,11 +131,6 @@ module.exports = {
         releaseNotes: {
           template,
           partials: { commitTemplate },
-          helpers: {
-            datetime() {
-              return new Date();
-            },
-          },
           issueResolution: {
             template: '{baseUrl}/{owner}/{repo}/issues/{ref}',
             baseUrl: 'https://github.com',
