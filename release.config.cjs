@@ -1,9 +1,9 @@
 /* eslint-disable no-template-curly-in-string */
 
-const dateFormat = import('dateformat');
-const promisify = import('util');
-const readFile = import('fs');
-const readFileAsync = promisify(readFile);
+const dateformat = import('dateformat');
+const util = import('util');
+const fs = import('fs');
+const readFileAsync = util.promisify(fs.readFile);
 
 // the *.hbs template and partials should be passed as strings of contents
 const template = readFileAsync('./build/default-template.hbs');
@@ -129,7 +129,7 @@ module.exports = {
           partials: { commitTemplate },
           helpers: {
             datetime(format = 'UTC:yyyy-mm-dd') {
-              return dateFormat(new Date(), format);
+              return dateformat.dateFormat(new Date(), format);
             },
           },
           issueResolution: {
