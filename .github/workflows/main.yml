@@ -22,10 +22,6 @@ jobs:
         run: npm run check
       - name: Build app
         run: npm run build
-      - name: Get directory
-        run: ls
-      - name: Get directory pwd
-        run: pwd
       - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
