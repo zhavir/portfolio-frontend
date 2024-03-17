@@ -1,8 +1,8 @@
 /* eslint-disable no-template-curly-in-string */
 
 const dateformat = import('dateformat');
-const util = import('util');
-const fs = import('fs');
+const util = require('util');
+const fs = require('fs');
 const readFileAsync = util.promisify(fs.readFile);
 
 // the *.hbs template and partials should be passed as strings of contents
