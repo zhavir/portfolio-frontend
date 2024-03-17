@@ -1,5 +1,17 @@
 # Changelog
 
+# [v1.1.0](https://github.com/zhavir/portfolio-frontend/compare/v1.0.2...v1.1.0) (Sun Mar 17 2024 01:21:34 GMT+0000 (Coordinated Universal Time))
+
+## 🐛 Fixing a bug
+- [`431e767`](https://github.com/zhavir/portfolio-frontend/commit/431e767)  fix(deployment): fix actions 
+- [`e833954`](https://github.com/zhavir/portfolio-frontend/commit/e833954)  fix: fix deploy 
+
+## ✨ Introducing new features
+- [`5e2c2d1`](https://github.com/zhavir/portfolio-frontend/commit/5e2c2d1)  feature: test feat 
+
+## 🚀 Deploying stuff
+- [`3b0473d`](https://github.com/zhavir/portfolio-frontend/commit/3b0473d)  deploy: fix
+
 # [v1.0.2](https://github.com/zhavir/portfolio-frontend/compare/v1.0.1...v1.0.2) (Sun Mar 17 2024 00:59:22 GMT+0000 (Coordinated Universal Time))
 
 ## 🐛 Fixing a bug
