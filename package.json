@@ -10,7 +10,7 @@
     "lint": "next lint --fix",
     "prettier": "npx prettier . --write",
     "check": "npx prettier . --check && next lint",
-    "prepare": "husky",
+    "prepare": "node .husky/install.mjs",
     "precommit": "npx prettier . --write && npm run lint",
     "cm": "git add . && npm run git:all &&  cz",
     "git:all": "git diff --cached --name-status --diff-filter=ACDMRTUXB*",
