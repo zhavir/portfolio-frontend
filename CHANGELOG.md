@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.1.2](https://github.com/zhavir/portfolio-frontend/compare/v1.1.1...v1.1.2) 
+
+## 🚑 Critical hotfix
+- [`4cf6f3e`](https://github.com/zhavir/portfolio-frontend/commit/4cf6f3e)  quickfix(infrastructure): fix image location
+
 # [v1.1.1](https://github.com/zhavir/portfolio-frontend/compare/v1.1.0...v1.1.1) 
 
 ## 🚑 Critical hotfix
