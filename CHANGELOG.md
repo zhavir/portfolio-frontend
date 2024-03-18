@@ -1,5 +1,15 @@
 # Changelog
 
+# [v1.1.1](https://github.com/zhavir/portfolio-frontend/compare/v1.1.0...v1.1.1) 
+
+## 🚑 Critical hotfix
+- [`4d2e9ab`](https://github.com/zhavir/portfolio-frontend/commit/4d2e9ab)  quickfix(web-server): fix images loading 
+
+## 🚀 Deploying stuff
+- [`263a760`](https://github.com/zhavir/portfolio-frontend/commit/263a760)  deploy: remove datetime 
+- [`e61590e`](https://github.com/zhavir/portfolio-frontend/commit/e61590e)  deploy(infrastructure): add deploy to aws 
+- [`98894e3`](https://github.com/zhavir/portfolio-frontend/commit/98894e3)  deploy(infrastructure): fix pipeline
+
 # [v1.1.0](https://github.com/zhavir/portfolio-frontend/compare/v1.0.2...v1.1.0) (Sun Mar 17 2024 01:21:34 GMT+0000 (Coordinated Universal Time))
 
 ## 🐛 Fixing a bug
