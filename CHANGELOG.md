@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.2.0](https://github.com/zhavir/portfolio-frontend/compare/v1.1.2...v1.2.0) 
+
+## ✨ Introducing new features
+- [`d4cc309`](https://github.com/zhavir/portfolio-frontend/commit/d4cc309)  feature(deployment): point to cloudfront
+
 # [v1.1.2](https://github.com/zhavir/portfolio-frontend/compare/v1.1.1...v1.1.2) 
 
 ## 🚑 Critical hotfix
