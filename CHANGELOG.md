@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.3.0](https://github.com/zhavir/portfolio-frontend/compare/v1.2.1...v1.3.0) 
+
+## ✨ Introducing new features
+- [`0125de6`](https://github.com/zhavir/portfolio-frontend/commit/0125de6)  feature(infrastructure): update dependencies
+
 # [v1.2.1](https://github.com/zhavir/portfolio-frontend/compare/v1.2.0...v1.2.1) 
 
 ## 🐛 Fixing a bug
