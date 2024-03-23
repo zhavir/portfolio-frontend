@@ -60,7 +60,7 @@ function AboutSection() {
               );
             })}
           </div>
-          <div className="mt-4">
+          <div className="mt-4 h-20">
             {aboutSections.find((t) => t.id === tab).content}
           </div>
         </div>
