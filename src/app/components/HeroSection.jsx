@@ -9,7 +9,7 @@ const HeroSection = () => {
     <section className="lg:py-16" id="hero">
       <div className="grid grid-cols-1 sm:grid-cols-12 w-full">
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
-          <h1 className="text-primaryText mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold ">
+          <h1 className="text-primaryText mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold h-32 sm:h-auto">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-400 ">
               {`Hello I'm`}{' '}
             </span>
@@ -30,8 +30,8 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-secondaryText text-base sm:text-lg mb-6 lg:text-xl mr-10">
-            {`I'm a Softwere engineer with 10 years of experience`}
+          <p className="text-secondaryText text-base sm:text-lg mb-6 lg:text-xl mr-0 sm:mr-10">
+            {`I'm a Software Engineer with more than 10 years of experience`}
           </p>
           <div>
             <Link
