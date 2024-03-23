@@ -11,7 +11,13 @@ const Bouble = ({ image, index, x, y, scale, isReady }) => {
         transform: `translate(${x}px, ${y}px) scale(${scale})`,
       }}
     >
-      <Image src={image} alt="logo image" width={100} className="p-1" />
+      <Image
+        src={image}
+        alt="logo image"
+        width={100}
+        height={100}
+        className="p-1"
+      />
     </div>
   );
 };
