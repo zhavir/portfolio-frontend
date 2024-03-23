@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.3.1](https://github.com/zhavir/portfolio-frontend/compare/v1.3.0...v1.3.1) 
+
+## 🐛 Fixing a bug
+- [`be7111b`](https://github.com/zhavir/portfolio-frontend/commit/be7111b)  fix: fix height about section
+
 # [v1.3.0](https://github.com/zhavir/portfolio-frontend/compare/v1.2.1...v1.3.0) 
 
 ## ✨ Introducing new features
