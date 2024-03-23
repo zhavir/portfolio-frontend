@@ -6,7 +6,7 @@ import { aboutSections } from '../lib/constants';
 
 function AboutSection() {
   const [tab, setTab] = useState('skills');
-  const [isPending, startTransition] = useTransition();
+  const [_, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -18,7 +18,7 @@ function AboutSection() {
       <div className="md:grid md:grid-cols-2 gap-8 mt-10 w-full mb-10">
         <div className="justify-center mt-20">
           <Image
-            src="/images/code.webp"
+            src="/static/images/code.webp"
             alt="code image"
             width="0"
             height="0"

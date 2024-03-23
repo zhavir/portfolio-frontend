@@ -1,7 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import GitHubIcon from '../../../public/github.svg';
-import LinkedinIcon from '../../../public/linkedin.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -15,6 +13,7 @@ const EmailSection = () => {
       message: e.target.message.value,
     };
     const JSONdata = JSON.stringify(data);
+    /*
     const endpoint = '';
     const options = {
       method: 'POST',
@@ -23,11 +22,12 @@ const EmailSection = () => {
       },
       body: JSONdata,
     };
-    //const response = await fetch(endpoint, options);
-    //const resData = await response.json();
-    //console.log(resData);
-    //if (response.status === 200) {
-    //console.log('Message sent');
+    const response = await fetch(endpoint, options);
+    const resData = await response.json();
+    console.log(resData);
+    if (response.status === 200) {
+    */
+    console.log(`Message sent ${JSONdata}`);
     setEmailSubmitted(true);
     //}
   };
@@ -39,20 +39,30 @@ const EmailSection = () => {
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-600 to-transparent rounded-full h-2/3 w-6/12 z-0 blur-3xl absolute top-1/3 -left-4 transform -translate-x-1/2 -translate-y-1/2"></div>
       <div className="z-0">
         <h5 className="text-xl font-bold text-primaryText my-2">
-          Let's Connect
+          {`Let's Connect`}
         </h5>
         <p className="text-secondaryText mb-4 max-w-md">
-          Reach me out if you're interested!
+          {`Reach me out if you're interested!`}
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/zhavir" target="_blank">
-            <Image src={GitHubIcon} alt="Github Icon" />
+            <Image
+              src="/static/images/github.svg"
+              width={80}
+              height={80}
+              alt="Github Icon"
+            />
           </Link>
           <Link
             href="https://www.linkedin.com/in/andrea-aramini/"
             target="_blank"
           >
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
+            <Image
+              src="/static/images/linkedin.svg"
+              width={80}
+              height={80}
+              alt="Linkedin Icon"
+            />
           </Link>
         </div>
       </div>
