@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.2.1](https://github.com/zhavir/portfolio-frontend/compare/v1.2.0...v1.2.1) 
+
+## 🐛 Fixing a bug
+- [`65a53c3`](https://github.com/zhavir/portfolio-frontend/commit/65a53c3)  fix: fix width of hero section
+
 # [v1.2.0](https://github.com/zhavir/portfolio-frontend/compare/v1.1.2...v1.2.0) 
 
 ## ✨ Introducing new features
