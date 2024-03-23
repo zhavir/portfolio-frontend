@@ -1,5 +1,20 @@
 # Changelog
 
+# [v1.2.1](https://github.com/zhavir/portfolio-frontend/compare/v1.2.0...v1.2.1) 
+
+## 🐛 Fixing a bug
+- [`65a53c3`](https://github.com/zhavir/portfolio-frontend/commit/65a53c3)  fix: fix width of hero section
+
+# [v1.2.0](https://github.com/zhavir/portfolio-frontend/compare/v1.1.2...v1.2.0) 
+
+## ✨ Introducing new features
+- [`d4cc309`](https://github.com/zhavir/portfolio-frontend/commit/d4cc309)  feature(deployment): point to cloudfront
+
+# [v1.1.2](https://github.com/zhavir/portfolio-frontend/compare/v1.1.1...v1.1.2) 
+
+## 🚑 Critical hotfix
+- [`4cf6f3e`](https://github.com/zhavir/portfolio-frontend/commit/4cf6f3e)  quickfix(infrastructure): fix image location
+
 # [v1.1.1](https://github.com/zhavir/portfolio-frontend/compare/v1.1.0...v1.1.1) 
 
 ## 🚑 Critical hotfix
