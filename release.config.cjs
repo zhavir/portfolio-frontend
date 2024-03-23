@@ -1,14 +1,17 @@
 /* eslint-disable no-template-curly-in-string */
 
-import dateFormat from 'dateformat';
-import { promisify } from 'util';
-import { readFile } from 'fs';
-
-const readFileAsync = promisify(readFile);
+const path = require('path');
+const util = require('util');
+const fs = require('fs');
+const readFileAsync = util.promisify(fs.readFile);
 
 // the *.hbs template and partials should be passed as strings of contents
-const template = readFileAsync('./build/default-template.hbs');
-const commitTemplate = readFileAsync('./build/commit-template.hbs');
+const template = readFileAsync(
+  path.resolve(__dirname, 'templates', 'release-notes.hbs'),
+);
+const commitTemplate = readFileAsync(
+  path.resolve(__dirname, 'templates', 'commit-template.hbs'),
+);
 let choreMessage = '';
 if (process.env.GITHUB_ACTIONS) {
   // CI IS SET
@@ -19,7 +22,7 @@ if (process.env.GITHUB_ACTIONS) {
     ':construction_worker: chore(release): ${nextRelease.version} [skip ci]';
 }
 
-const config = {
+module.exports = {
   release: {
     defaultBranch: 'main',
     branches: [
@@ -128,11 +131,6 @@ const config = {
         releaseNotes: {
           template,
           partials: { commitTemplate },
-          helpers: {
-            datetime(format = 'UTC:yyyy-mm-dd') {
-              return dateFormat(new Date(), format);
-            },
-          },
           issueResolution: {
             template: '{baseUrl}/{owner}/{repo}/issues/{ref}',
             baseUrl: 'https://github.com',
@@ -170,7 +168,7 @@ const config = {
       {
         assets: [
           {
-            path: 'dist/**',
+            path: 'out/**',
           },
         ],
       },
@@ -178,5 +176,3 @@ const config = {
   ],
   extends: ['semantic-release-config-gitmoji'],
 };
-
-export default config;
