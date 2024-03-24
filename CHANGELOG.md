@@ -1,5 +1,11 @@
 # Changelog
 
+# [v1.3.3](https://github.com/zhavir/portfolio-frontend/compare/v1.3.2...v1.3.3) 
+
+## 🐛 Fixing a bug
+- [`567f93b`](https://github.com/zhavir/portfolio-frontend/commit/567f93b)  fix: test ruleset restriction 
+- [`4d19b7a`](https://github.com/zhavir/portfolio-frontend/commit/4d19b7a)  fix(deployment): fix node version
+
 # [v1.3.2](https://github.com/zhavir/portfolio-frontend/compare/v1.3.1...v1.3.2) 
 
 ## 🐛 Fixing a bug
