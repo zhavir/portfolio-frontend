@@ -46,7 +46,12 @@ function Navbar() {
           </ul>
         </div>
       </motion.div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? (
+        <MenuOverlay
+          links={navLinks}
+          handleOnClick={() => setNavbarOpen(false)}
+        />
+      ) : null}
     </motion.nav>
   );
 }
