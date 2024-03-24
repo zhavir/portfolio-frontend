@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.3.2](https://github.com/zhavir/portfolio-frontend/compare/v1.3.1...v1.3.2) 
+
+## 🐛 Fixing a bug
+- [`3295ce3`](https://github.com/zhavir/portfolio-frontend/commit/3295ce3)  fix: auto close menu
+
 # [v1.3.1](https://github.com/zhavir/portfolio-frontend/compare/v1.3.0...v1.3.1) 
 
 ## 🐛 Fixing a bug
