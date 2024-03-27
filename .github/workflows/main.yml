@@ -1,4 +1,10 @@
-name: Semantic release
+name: Release Pipeline
+
+concurrency:
+  group: merge-${{ github.ref }}
+
+permissions:
+  id-token: write
 
 on:
   push:
@@ -20,8 +26,6 @@ jobs:
         run: npm install
       - name: Check indentation and lint
         run: npm run check
-      - name: Build app
-        run: npm run build
       - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -30,8 +34,9 @@ jobs:
         run: npm run release
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-west-2
-      - name: Deploy on aws
-        run: aws s3 sync ./out s3://andrea-aramini-profilepage
+          role-to-assume: arn:aws:iam::1234567890:role/GitHub
+          role-duration-seconds: 14390 #adjust as needed for your build time
+          aws-region: us-east-1
+      - name: Deploy app
+        run: |
+          npm run deploy
