@@ -42,13 +42,13 @@ export function IAM({ app, stack }: StackContext) {
       clientIds: ['sts.amazonaws.com'],
     });
 
-    const organization = 'AndreaAramini'; // Use your GitHub organization
+    // const organization = 'AndreaAramini'; // Use your GitHub organization
     const repository = 'portfolio-frontend'; // Use your GitHub repository
 
     new iam.Role(stack, 'GitHubActionsRole', {
       assumedBy: new iam.OpenIdConnectPrincipal(provider).withConditions({
         StringLike: {
-          'token.actions.githubusercontent.com:sub': `repo:${organization}/${repository}:*`,
+          'token.actions.githubusercontent.com:sub': `repo:${repository}:*`,
         },
       }),
       description: 'Role assumed for deploying from GitHub CI using AWS CDK',
