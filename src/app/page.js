@@ -4,11 +4,7 @@ import Footer from './components/Footer';
 import AchivementSection from './components/AchivementSection';
 import AboutSection from './components/AboutSection';
 import EmailSection from './components/ContactSection';
-import dynamic from 'next/dynamic';
-
-const SkillSection = dynamic(() => import('./components/SkillSection'), {
-  ssr: false,
-});
+import SkillSection from '../../app/components/SkillSection';
 
 export default function Home() {
   return (
