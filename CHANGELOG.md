@@ -1,5 +1,10 @@
 # Changelog
 
+# [v1.3.4](https://github.com/zhavir/portfolio-frontend/compare/v1.3.3...v1.3.4) 
+
+## 🐛 Fixing a bug
+- [`51f0098`](https://github.com/zhavir/portfolio-frontend/commit/51f0098)  fix: fix cloudfront reference
+
 # [v1.3.3](https://github.com/zhavir/portfolio-frontend/compare/v1.3.2...v1.3.3) 
 
 ## 🐛 Fixing a bug
