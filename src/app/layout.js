@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Portfolio',
   description: 'Simple NextJs application for showing my porfolio',
   icons: {
-    icon: '/images/favicon.ico',
+    icon: '/static/images/favicon.ico',
   },
 };
 

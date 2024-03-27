@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import AchivementSection from './components/AchivementSection';
 import AboutSection from './components/AboutSection';
 import EmailSection from './components/ContactSection';
-import SkillSection from '../../app/components/SkillSection';
+import SkillSection from './components/SkillSection';
 
 export default function Home() {
   return (
