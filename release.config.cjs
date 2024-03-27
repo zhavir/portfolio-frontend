@@ -25,20 +25,7 @@ if (process.env.GITHUB_ACTIONS) {
 module.exports = {
   release: {
     defaultBranch: 'main',
-    branches: [
-      '+([0-9])?(.{+([0-9]),x}).x',
-      'main',
-      'next',
-      'next-major',
-      {
-        name: 'beta',
-        prerelease: true,
-      },
-      {
-        name: 'alpha',
-        prerelease: true,
-      },
-    ],
+    branches: ['main'],
   },
   plugins: [
     [
