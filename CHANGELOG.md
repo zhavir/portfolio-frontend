@@ -1,5 +1,11 @@
 # Changelog
 
+# [v1.3.5](https://github.com/zhavir/portfolio-frontend/compare/v1.3.4...v1.3.5) 
+
+## 🐛 Fixing a bug
+- [`f2e3bb1`](https://github.com/zhavir/portfolio-frontend/commit/f2e3bb1)  fix: fix ssr 
+- [`fa1ab41`](https://github.com/zhavir/portfolio-frontend/commit/fa1ab41)  fix: fix favicon
+
 # [v1.3.4](https://github.com/zhavir/portfolio-frontend/compare/v1.3.3...v1.3.4) 
 
 ## 🐛 Fixing a bug
