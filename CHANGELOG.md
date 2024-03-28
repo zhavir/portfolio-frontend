@@ -1,5 +1,13 @@
 # Changelog
 
+# [v2.0.12](https://github.com/zhavir/portfolio-frontend/compare/v2.0.11...v2.0.12) 
+
+## 🐛 Fixing a bug
+- [`f059c2a`](https://github.com/zhavir/portfolio-frontend/commit/f059c2a)  fix(ci/cd): improve workflow cache management 
+
+## 🚀 Deploying stuff
+- [`df86629`](https://github.com/zhavir/portfolio-frontend/commit/df86629)  deploy(ci/cd): fix pipeline name
+
 # [v2.0.11](https://github.com/zhavir/portfolio-frontend/compare/v2.0.10...v2.0.11) 
 
 ## 🐛 Fixing a bug
