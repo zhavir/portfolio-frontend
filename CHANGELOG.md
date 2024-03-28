@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.4](https://github.com/zhavir/portfolio-frontend/compare/v2.0.3...v2.0.4) 
+
+## 🐛 Fixing a bug
+- [`aa78c2c`](https://github.com/zhavir/portfolio-frontend/commit/aa78c2c)  fix: fix trigger policy
+
 # [v2.0.3](https://github.com/zhavir/portfolio-frontend/compare/v2.0.2...v2.0.3) 
 
 ## 🐛 Fixing a bug
