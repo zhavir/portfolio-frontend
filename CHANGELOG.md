@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.2](https://github.com/zhavir/portfolio-frontend/compare/v2.0.1...v2.0.2) 
+
+## 🐛 Fixing a bug
+- [`a64c29b`](https://github.com/zhavir/portfolio-frontend/commit/a64c29b)  fix: fix iam policy
+
 # [v2.0.1](https://github.com/zhavir/portfolio-frontend/compare/v2.0.0...v2.0.1) 
 
 ## 🐛 Fixing a bug
