@@ -1,0 +1,54 @@
+name: Release Pipeline
+
+concurrency:
+  group: merge-${{ github.ref }}
+
+permissions:
+  id-token: write
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v**
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_GITHUB_ROLE }}
+          role-duration-seconds: 14390
+          aws-region: us-east-1
+      - name: Restore sst cache
+        id: restore-sst-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .sst
+            .open-next
+          key: sst-cache
+      - name: Deploy app
+        run: |
+          npm run deploy
+      - name: Save sst cache
+        id: save-sst-cache
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .sst
+            .open-next
+          key: sst-cache
