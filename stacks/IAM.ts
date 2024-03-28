@@ -16,6 +16,7 @@ export function IAM({ app, stack }: StackContext) {
       assumedBy: new iam.OpenIdConnectPrincipal(provider).withConditions({
         StringLike: {
           'token.actions.githubusercontent.com:sub': `repo:${repository}:*`,
+          'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
         },
       }),
       description: 'Role assumed for deploying from GitHub CI using AWS CDK',
