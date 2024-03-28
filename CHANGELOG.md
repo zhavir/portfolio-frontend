@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.14](https://github.com/zhavir/portfolio-frontend/compare/v2.0.13...v2.0.14) 
+
+## 🐛 Fixing a bug
+- [`0234380`](https://github.com/zhavir/portfolio-frontend/commit/0234380)  fix(ci/cd): fix permission levels
+
 # [v2.0.13](https://github.com/zhavir/portfolio-frontend/compare/v2.0.12...v2.0.13) 
 
 ## 🐛 Fixing a bug
