@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.6](https://github.com/zhavir/portfolio-frontend/compare/v2.0.5...v2.0.6) 
+
+## 🐛 Fixing a bug
+- [`4fc1e33`](https://github.com/zhavir/portfolio-frontend/commit/4fc1e33)  fix: fix trigger
+
 # [v2.0.5](https://github.com/zhavir/portfolio-frontend/compare/v2.0.4...v2.0.5) 
 
 ## 🐛 Fixing a bug
