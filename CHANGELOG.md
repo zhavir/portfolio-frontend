@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.13](https://github.com/zhavir/portfolio-frontend/compare/v2.0.12...v2.0.13) 
+
+## 🐛 Fixing a bug
+- [`d0defd7`](https://github.com/zhavir/portfolio-frontend/commit/d0defd7)  fix(ci/cd): fix envvar def
+
 # [v2.0.12](https://github.com/zhavir/portfolio-frontend/compare/v2.0.11...v2.0.12) 
 
 ## 🐛 Fixing a bug
