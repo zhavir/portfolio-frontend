@@ -1,4 +1,4 @@
-name: SemVer Pipeline
+name: Release Pipeline
 
 concurrency:
   group: merge-${{ github.ref }}
