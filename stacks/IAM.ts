@@ -15,7 +15,7 @@ export function IAM({ app, stack }: StackContext) {
     new iam.Role(stack, 'GitHubActionsRole', {
       assumedBy: new iam.OpenIdConnectPrincipal(provider).withConditions({
         StringLike: {
-          'token.actions.githubusercontent.com:sub': `repo:${organization}/${repository}:*`,
+          'token.actions.githubusercontent.com:sub': `repo:${organization}/${repository}:ref:refs/tags/v*`,
         },
         StringEquals: {
           'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
