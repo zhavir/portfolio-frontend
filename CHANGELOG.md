@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.1](https://github.com/zhavir/portfolio-frontend/compare/v2.0.0...v2.0.1) 
+
+## 🐛 Fixing a bug
+- [`6fc3bb8`](https://github.com/zhavir/portfolio-frontend/commit/6fc3bb8)  fix(infrastructure): split pipeline scope
+
 # [v2.0.0](https://github.com/zhavir/portfolio-frontend/compare/v1.3.5...v2.0.0) 
 
 ## 🐛 Fixing a bug
