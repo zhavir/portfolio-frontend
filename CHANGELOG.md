@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.9](https://github.com/zhavir/portfolio-frontend/compare/v2.0.8...v2.0.9) 
+
+## 🐛 Fixing a bug
+- [`d3dcc4b`](https://github.com/zhavir/portfolio-frontend/commit/d3dcc4b)  fix(ci/cd): fix iam role
+
 # [v2.0.8](https://github.com/zhavir/portfolio-frontend/compare/v2.0.7...v2.0.8) 
 
 ## 🐛 Fixing a bug
