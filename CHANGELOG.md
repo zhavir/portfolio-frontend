@@ -1,5 +1,21 @@
 # Changelog
 
+# [v2.0.1](https://github.com/zhavir/portfolio-frontend/compare/v2.0.0...v2.0.1) 
+
+## 🐛 Fixing a bug
+- [`6fc3bb8`](https://github.com/zhavir/portfolio-frontend/commit/6fc3bb8)  fix(infrastructure): split pipeline scope
+
+# [v2.0.0](https://github.com/zhavir/portfolio-frontend/compare/v1.3.5...v2.0.0) 
+
+## 🐛 Fixing a bug
+- [`3758c17`](https://github.com/zhavir/portfolio-frontend/commit/3758c17)  fix: remove organization reference 
+
+## ✨ Introducing new features
+- [`a9463f9`](https://github.com/zhavir/portfolio-frontend/commit/a9463f9)  feature: add pipeline for sst 
+
+## 💥 Introducing breaking changes
+- [`631fed0`](https://github.com/zhavir/portfolio-frontend/commit/631fed0)  breaking(infrastructure): move from static to ssr
+
 # [v1.3.5](https://github.com/zhavir/portfolio-frontend/compare/v1.3.4...v1.3.5) 
 
 ## 🐛 Fixing a bug
