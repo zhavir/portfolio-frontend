@@ -22,6 +22,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 21
+          cache: 'npm'
       - name: Install dependencies
         run: npm install
       - name: Check indentation and lint
@@ -34,9 +35,25 @@ jobs:
         run: npm run release
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::1234567890:role/GitHub
+          role-to-assume: ${{ secrets.AWS_GITHUB_ROLE }}
           role-duration-seconds: 14390 #adjust as needed for your build time
           aws-region: us-east-1
+      - name: Restore sst cache
+        id: restore-sst-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .sst
+            .open-next
+          key: sst-cache
       - name: Deploy app
         run: |
           npm run deploy
+      - name: Save sst cache
+        id: save-sst-cache
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .sst
+            .open-next
+          key: sst-cache
