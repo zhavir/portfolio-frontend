@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.10](https://github.com/zhavir/portfolio-frontend/compare/v2.0.9...v2.0.10) 
+
+## 🐛 Fixing a bug
+- [`3e30548`](https://github.com/zhavir/portfolio-frontend/commit/3e30548)  fix(ci/cd): restrict iam policy
+
 # [v2.0.9](https://github.com/zhavir/portfolio-frontend/compare/v2.0.8...v2.0.9) 
 
 ## 🐛 Fixing a bug
