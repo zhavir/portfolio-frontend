@@ -1,5 +1,16 @@
 # Changelog
 
+# [v2.0.8](https://github.com/zhavir/portfolio-frontend/compare/v2.0.7...v2.0.8) 
+
+## 🐛 Fixing a bug
+- [`b461894`](https://github.com/zhavir/portfolio-frontend/commit/b461894)  fix(ci/cd): removing debug config 
+
+## 🚀 Deploying stuff
+- [`f6661e6`](https://github.com/zhavir/portfolio-frontend/commit/f6661e6)  deploy(infrastructure): use different aws action version 
+- [`33d6473`](https://github.com/zhavir/portfolio-frontend/commit/33d6473)  deploy: add workflow_dispatch 
+- [`404d7c2`](https://github.com/zhavir/portfolio-frontend/commit/404d7c2)  deploy: remove keep credential 
+- [`f44d8f3`](https://github.com/zhavir/portfolio-frontend/commit/f44d8f3)  deploy(ci/cd): fix duration time
+
 # [v2.0.7](https://github.com/zhavir/portfolio-frontend/compare/v2.0.6...v2.0.7) 
 
 ## 🐛 Fixing a bug
