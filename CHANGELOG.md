@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.7](https://github.com/zhavir/portfolio-frontend/compare/v2.0.6...v2.0.7) 
+
+## 🐛 Fixing a bug
+- [`fd6bd9b`](https://github.com/zhavir/portfolio-frontend/commit/fd6bd9b)  fix: remove explicit token
+
 # [v2.0.6](https://github.com/zhavir/portfolio-frontend/compare/v2.0.5...v2.0.6) 
 
 ## 🐛 Fixing a bug
