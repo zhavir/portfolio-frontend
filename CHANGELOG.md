@@ -1,5 +1,11 @@
 # Changelog
 
+# [v2.0.11](https://github.com/zhavir/portfolio-frontend/compare/v2.0.10...v2.0.11) 
+
+## 🐛 Fixing a bug
+- [`56e4a2a`](https://github.com/zhavir/portfolio-frontend/commit/56e4a2a)  fix(ci/cd): fix pipeline cache 
+- [`73e87e5`](https://github.com/zhavir/portfolio-frontend/commit/73e87e5)  fix(ci/cd): fix workflow chain
+
 # [v2.0.10](https://github.com/zhavir/portfolio-frontend/compare/v2.0.9...v2.0.10) 
 
 ## 🐛 Fixing a bug
