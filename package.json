@@ -14,7 +14,7 @@
     "precommit": "npx prettier . --write && npm run lint",
     "cm": "git add . && npm run git:all &&  cz",
     "git:all": "git diff --cached --name-status --diff-filter=ACDMRTUXB*",
-    "release": "semantic-release --no-ci",
+    "semver": "semantic-release --no-ci",
     "deploy": "sst deploy --stage production"
   },
   "dependencies": {
