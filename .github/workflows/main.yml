@@ -3,9 +3,6 @@ name: Release Pipeline
 concurrency:
   group: merge-${{ github.ref }}
 
-permissions:
-  id-token: write
-
 on:
   push:
     branches:
@@ -14,6 +11,8 @@ on:
 jobs:
   semver:
     runs-on: ubuntu-latest
+    outputs:
+      new_tag_version: ${{ steps.tag_version.outputs.new_tag_version }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,6 +26,11 @@ jobs:
         run: npm install
       - name: Check indentation and lint
         run: npm run check
+      - name: Dry run to get the next release version
+        id: tag_version
+        run: |
+          export NEXT_TAG_VERSION=$(npx semantic-release --dry-run | grep 'The next release version is' | sed -E 's/.* ([[:digit:].]+)$/\1/')
+          echo "new_tag_version=${NEXT_TAG_VERSION}" >> $GITHUB_OUTPUT
       - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -34,8 +38,12 @@ jobs:
           CI: 1
         run: npm run semver
 
-  production:
+  deploy:
+    permissions:
+      id-token: write
+      contents: read
     needs: [semver]
+    if: ${{ needs.semver.outputs.new_tag_version }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -62,6 +70,14 @@ jobs:
       - name: Deploy app
         run: |
           npm run deploy
+      - name: Delete Previous Cache
+        if: ${{ steps.restore-sst-cache.outputs.cache-hit }}
+        continue-on-error: true
+        run: |
+          gh extension install actions/gh-actions-cache
+          gh actions-cache delete "sst-cache" --confirm
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Save sst cache
         id: save-sst-cache
         uses: actions/cache/save@v4

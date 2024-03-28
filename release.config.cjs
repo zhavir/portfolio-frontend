@@ -139,7 +139,6 @@ module.exports = {
       '@semantic-release/npm',
       {
         npmPublish: false,
-        tarballDir: 'dist',
       },
     ],
     [
@@ -150,16 +149,7 @@ module.exports = {
         // message: choreMessage,
       },
     ],
-    [
-      '@semantic-release/github',
-      {
-        assets: [
-          {
-            path: 'out/**',
-          },
-        ],
-      },
-    ],
+    '@semantic-release/github',
   ],
   extends: ['semantic-release-config-gitmoji'],
 };
