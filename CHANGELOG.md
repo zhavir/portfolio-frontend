@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.15](https://github.com/zhavir/portfolio-frontend/compare/v2.0.14...v2.0.15) 
+
+## 🐛 Fixing a bug
+- [`e8ab638`](https://github.com/zhavir/portfolio-frontend/commit/e8ab638)  fix(ci/cd): fix token env name
+
 # [v2.0.14](https://github.com/zhavir/portfolio-frontend/compare/v2.0.13...v2.0.14) 
 
 ## 🐛 Fixing a bug
