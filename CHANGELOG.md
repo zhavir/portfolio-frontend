@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.3](https://github.com/zhavir/portfolio-frontend/compare/v2.0.2...v2.0.3) 
+
+## 🐛 Fixing a bug
+- [`91839b2`](https://github.com/zhavir/portfolio-frontend/commit/91839b2)  fix: fix iam trust relationship
+
 # [v2.0.2](https://github.com/zhavir/portfolio-frontend/compare/v2.0.1...v2.0.2) 
 
 ## 🐛 Fixing a bug
