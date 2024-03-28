@@ -1,5 +1,8 @@
 name: SemVer Pipeline
 
+concurrency:
+  group: merge-${{ github.ref }}
+
 on:
   push:
     branches:
