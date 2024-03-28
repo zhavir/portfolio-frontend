@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.5](https://github.com/zhavir/portfolio-frontend/compare/v2.0.4...v2.0.5) 
+
+## 🐛 Fixing a bug
+- [`ed58d7d`](https://github.com/zhavir/portfolio-frontend/commit/ed58d7d)  fix: fix aws role
+
 # [v2.0.4](https://github.com/zhavir/portfolio-frontend/compare/v2.0.3...v2.0.4) 
 
 ## 🐛 Fixing a bug
