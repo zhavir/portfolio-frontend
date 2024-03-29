@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.18](https://github.com/zhavir/portfolio-frontend/compare/v2.0.17...v2.0.18) 
+
+## 🐛 Fixing a bug
+- [`d58ffc7`](https://github.com/zhavir/portfolio-frontend/commit/d58ffc7)  fix(ci/cd): remove token
+
 # [v2.0.17](https://github.com/zhavir/portfolio-frontend/compare/v2.0.16...v2.0.17) 
 
 ## 🐛 Fixing a bug
