@@ -48,7 +48,6 @@ jobs:
       id-token: write
       contents: read
       actions: write
-      repository-projects: write
     needs: [semver]
     if: ${{ needs.semver.outputs.new_tag_version }}
     runs-on: ubuntu-latest
@@ -82,6 +81,8 @@ jobs:
         continue-on-error: true
         run: |
           gh cache delete "sst-cache"
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Save sst cache
         id: save-sst-cache
         uses: actions/cache/save@v4
