@@ -48,6 +48,7 @@ jobs:
       id-token: write
       contents: read
       actions: write
+      repository-projects: write
     needs: [semver]
     if: ${{ needs.semver.outputs.new_tag_version }}
     runs-on: ubuntu-latest
@@ -76,7 +77,18 @@ jobs:
       - name: Deploy app
         run: |
           npm run deploy
-      - name: Enforce cache update for a local NX cache
+      - name: Delete Previous Cache
+        if: ${{ steps.restore-sst-cache.outputs.cache-hit }}
+        continue-on-error: true
         run: |
-          STATE_CACHE_KEY="sst-cache"
-          echo "STATE_CACHE_KEY=${STATE_CACHE_KEY}" >> $GITHUB_ENV
+          gh cache delete "sst-cache"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Save sst cache
+        id: save-sst-cache
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .sst
+            .open-next
+          key: sst-cache
