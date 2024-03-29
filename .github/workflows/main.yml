@@ -21,7 +21,7 @@ jobs:
     outputs:
       new_tag_version: ${{ steps.tag_version.outputs.new_tag_version }}
     env:
-      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
         with:
