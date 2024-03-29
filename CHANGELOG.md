@@ -1,5 +1,12 @@
 # Changelog
 
+# [v2.0.20](https://github.com/zhavir/portfolio-frontend/compare/v2.0.19...v2.0.20) 
+
+## ⚗️ Experimenting new things
+- [`dd93c17`](https://github.com/zhavir/portfolio-frontend/commit/dd93c17)  experiment(ci/cd): use github token directly for semver 
+- [`69ab62e`](https://github.com/zhavir/portfolio-frontend/commit/69ab62e)  experiment(ci/cd): fix permission set 
+- [`ea70ef6`](https://github.com/zhavir/portfolio-frontend/commit/ea70ef6)  experiment(ci/cd): rollback edits
+
 # [v2.0.19](https://github.com/zhavir/portfolio-frontend/compare/v2.0.18...v2.0.19) 
 
 ## 🐛 Fixing a bug
