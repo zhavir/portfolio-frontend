@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.19](https://github.com/zhavir/portfolio-frontend/compare/v2.0.18...v2.0.19) 
+
+## 🐛 Fixing a bug
+- [`da885e6`](https://github.com/zhavir/portfolio-frontend/commit/da885e6)  fix(ci/cd): fix cache
+
 # [v2.0.18](https://github.com/zhavir/portfolio-frontend/compare/v2.0.17...v2.0.18) 
 
 ## 🐛 Fixing a bug
