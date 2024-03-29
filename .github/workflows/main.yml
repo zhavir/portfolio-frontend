@@ -15,8 +15,9 @@ on:
 jobs:
   semver:
     permissions:
-      contents: read
+      contents: write
       actions: write
+      issues: write
     runs-on: ubuntu-latest
     outputs:
       new_tag_version: ${{ steps.tag_version.outputs.new_tag_version }}
