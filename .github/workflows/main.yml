@@ -82,8 +82,6 @@ jobs:
         continue-on-error: true
         run: |
           gh cache delete "sst-cache"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Save sst cache
         id: save-sst-cache
         uses: actions/cache/save@v4
