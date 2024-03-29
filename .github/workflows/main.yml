@@ -67,7 +67,7 @@ jobs:
         run: npm install
       - name: Restore sst cache
         id: restore-sst-cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache@v4
         with:
           path: |
             .sst
@@ -76,19 +76,7 @@ jobs:
       - name: Deploy app
         run: |
           npm run deploy
-      - name: Delete Previous Cache
-        if: ${{ steps.restore-sst-cache.outputs.cache-hit }}
-        continue-on-error: true
+      - name: Enforce cache update for a local NX cache
         run: |
-          gh extension install actions/gh-actions-cache
-          gh actions-cache delete "sst-cache" --confirm
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Save sst cache
-        id: save-sst-cache
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            .sst
-            .open-next
-          key: sst-cache
+          STATE_CACHE_KEY="sst-cache"
+          echo "STATE_CACHE_KEY=${STATE_CACHE_KEY}" >> $GITHUB_ENV
