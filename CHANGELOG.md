@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.17](https://github.com/zhavir/portfolio-frontend/compare/v2.0.16...v2.0.17) 
+
+## 🐛 Fixing a bug
+- [`7351184`](https://github.com/zhavir/portfolio-frontend/commit/7351184)  fix(ci/cd): fix cache management
+
 # [v2.0.16](https://github.com/zhavir/portfolio-frontend/compare/v2.0.15...v2.0.16) 
 
 ## 🐛 Fixing a bug
