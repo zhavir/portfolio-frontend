@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.0.21](https://github.com/zhavir/portfolio-frontend/compare/v2.0.20...v2.0.21) 
+
+## 🩹 Simple fix for a non-critical issue
+- [`c919924`](https://github.com/zhavir/portfolio-frontend/commit/c919924)  adhesive-bandage: move husky dep
+
 # [v2.0.20](https://github.com/zhavir/portfolio-frontend/compare/v2.0.19...v2.0.20) 
 
 ## ⚗️ Experimenting new things
