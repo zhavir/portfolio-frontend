@@ -2,6 +2,11 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
-  }
+    },
+    "checkJs": true,
+    "jsx": "preserve",
+    "moduleResolution": "bundler",
+    "module": "esnext"
+  },
+  "exclude": ["node_modules", "**/node_modules/*"]
 }
