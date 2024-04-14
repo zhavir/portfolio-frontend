@@ -1,0 +1,14 @@
+.git/
+.github/
+
+.husky/
+.idea/
+.next/
+.open-next/
+.sst/
+node_modules/
+templates/
+.vscode/
+Dockerfile
+.dockerignore
+docker-compose.yml
