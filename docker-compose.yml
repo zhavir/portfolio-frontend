@@ -1,0 +1,15 @@
+services:
+  portfolio-frontend:
+    build:
+      target: production
+    volumes:
+      - './src:/app/src'
+    image: 'portfolio-frontend:production'
+    ports:
+      - '3000:3000'
+    networks:
+      - production
+
+networks:
+  production:
+    driver: bridge
