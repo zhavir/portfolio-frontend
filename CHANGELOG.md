@@ -1,5 +1,16 @@
 # Changelog
 
+# [v2.1.0](https://github.com/zhavir/portfolio-frontend/compare/v2.0.21...v2.1.0) 
+
+## ✨ Introducing new features
+- [`ebcf0ab`](https://github.com/zhavir/portfolio-frontend/commit/ebcf0ab)  feature: implement real call to backend 
+
+## 📦 Updating compiled files or packages
+- [`b3c50ab`](https://github.com/zhavir/portfolio-frontend/commit/b3c50ab)  dep-up: update dependencies 
+
+## 🧱 Infrastructure related changes
+- [`b42ef33`](https://github.com/zhavir/portfolio-frontend/commit/b42ef33)  bricks: add docker image and docker compose
+
 # [v2.0.21](https://github.com/zhavir/portfolio-frontend/compare/v2.0.20...v2.0.21) 
 
 ## 🩹 Simple fix for a non-critical issue
