@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.1.1](https://github.com/zhavir/portfolio-frontend/compare/v2.1.0...v2.1.1) 
+
+## 🐛 Fixing a bug
+- [`954fd13`](https://github.com/zhavir/portfolio-frontend/commit/954fd13)  fix: fix rerouting
+
 # [v2.1.0](https://github.com/zhavir/portfolio-frontend/compare/v2.0.21...v2.1.0) 
 
 ## ✨ Introducing new features
