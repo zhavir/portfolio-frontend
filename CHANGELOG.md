@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.1.2](https://github.com/zhavir/portfolio-frontend/compare/v2.1.1...v2.1.2) 
+
+## 🐛 Fixing a bug
+- [`aa6342b`](https://github.com/zhavir/portfolio-frontend/commit/aa6342b)  fix: avoid prefetch Option
+
 # [v2.1.1](https://github.com/zhavir/portfolio-frontend/compare/v2.1.0...v2.1.1) 
 
 ## 🐛 Fixing a bug
