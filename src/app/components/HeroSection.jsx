@@ -1,10 +1,25 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
+import { generateCurriculum } from '../lib/client';
 
 const HeroSection = () => {
+  const [hasCvDownloaded, setHasCvDownloaded] = useState(false);
+  const [downloadLink, setDownloadLink] = useState();
+
+  useEffect(() => {
+    const getDownloadLink = async () => {
+      await generateCurriculum().then((response) => {
+        if (response.status === 200) {
+          setDownloadLink(response.data.download_link);
+        }
+      });
+    };
+    getDownloadLink();
+  });
+
   return (
     <section className="lg:py-16" id="hero">
       <div className="grid grid-cols-1 sm:grid-cols-12 w-full">
@@ -40,11 +55,23 @@ const HeroSection = () => {
             >
               Contact Me
             </Link>
-            <button className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-600 to-secondary-400 hover:bg-slate-800 text-primaryText mt-3">
-              <span className="block bg-secondaryBackgroud hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
-            </button>
+            {downloadLink ? (
+              <Link
+                className={`px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-600 to-secondary-400 hover:bg-slate-800 text-primaryText mt-3 ${hasCvDownloaded ? 'pointer-events-none' : ''}`}
+                href={downloadLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                locale={false}
+                download
+                onClick={() => setHasCvDownloaded(true)}
+              >
+                <span className="block bg-secondaryBackgroud hover:bg-slate-800 rounded-full px-5 py-2">
+                  Download CV
+                </span>
+              </Link>
+            ) : (
+              ''
+            )}
           </div>
         </div>
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">

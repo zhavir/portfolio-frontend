@@ -12,10 +12,17 @@ export async function sendContactMeEmail(emailFrom, subject, text) {
     subject: subject,
     text: text,
   };
-  console.log(data);
   try {
     return await instance.post('/contact-me/', data);
   } catch (error) {
     console.log(`unable to send email ${error}`);
+  }
+}
+
+export async function generateCurriculum() {
+  try {
+    return await instance.post('/curriculum/');
+  } catch (error) {
+    console.log(`unable to generate curriculum ${error}`);
   }
 }
