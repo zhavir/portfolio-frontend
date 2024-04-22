@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.2.0](https://github.com/zhavir/portfolio-frontend/compare/v2.1.2...v2.2.0) 
+
+## ✨ Introducing new features
+- [`ce021f4`](https://github.com/zhavir/portfolio-frontend/commit/ce021f4)  feature: add download cv
+
 # [v2.1.2](https://github.com/zhavir/portfolio-frontend/compare/v2.1.1...v2.1.2) 
 
 ## 🐛 Fixing a bug
