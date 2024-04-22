@@ -1,16 +1,26 @@
 import { Duration } from 'aws-cdk-lib';
 import * as iam from 'aws-cdk-lib/aws-iam';
-import { StackContext } from 'sst/constructs';
+import { Stack, StackContext } from 'sst/constructs';
+import * as ssm from 'aws-cdk-lib/aws-ssm';
+import { IOpenIdConnectProvider } from 'aws-cdk-lib/aws-iam';
+
+function getProvider(stack: Stack): IOpenIdConnectProvider {
+  const openIdConnectProviderArn = ssm.StringParameter.valueForStringParameter(
+    stack,
+    'openIdConnectProviderArn',
+  );
+  return iam.OpenIdConnectProvider.fromOpenIdConnectProviderArn(
+    stack,
+    'GitHub',
+    openIdConnectProviderArn,
+  );
+}
 
 export function IAM({ app, stack }: StackContext) {
   if (app.stage === 'production') {
-    const provider = new iam.OpenIdConnectProvider(stack, 'GitHub', {
-      url: 'https://token.actions.githubusercontent.com',
-      clientIds: ['sts.amazonaws.com'],
-    });
-
-    const organization = 'zhavir'; // Use your GitHub organization
-    const repository = 'portfolio-frontend'; // Use your GitHub repository
+    const provider = getProvider(stack);
+    const organization = 'zhavir';
+    const repository = 'portfolio-frontend';
 
     new iam.Role(stack, 'GitHubActionsRole', {
       assumedBy: new iam.OpenIdConnectPrincipal(provider).withConditions({
@@ -22,7 +32,7 @@ export function IAM({ app, stack }: StackContext) {
         },
       }),
       description: 'Role assumed for deploying from GitHub CI using AWS CDK',
-      roleName: 'GitHub', // Change this to match the role name in the GitHub workflow file
+      roleName: 'GitHubPortfolioFrontend',
       maxSessionDuration: Duration.hours(1),
       inlinePolicies: {
         // You could attach AdministratorAccess here or constrain it even more, but this uses more granular permissions used by SST
