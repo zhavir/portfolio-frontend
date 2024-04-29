@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.3.0](https://github.com/zhavir/portfolio-frontend/compare/v2.2.0...v2.3.0) 
+
+## ✨ Introducing new features
+- [`fe802b5`](https://github.com/zhavir/portfolio-frontend/commit/fe802b5)  feature(infrastructure): remove infrastructure dependencies
+
 # [v2.2.0](https://github.com/zhavir/portfolio-frontend/compare/v2.1.2...v2.2.0) 
 
 ## ✨ Introducing new features
