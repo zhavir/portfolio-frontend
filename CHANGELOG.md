@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.4.0](https://github.com/zhavir/portfolio-frontend/compare/v2.3.0...v2.4.0) 
+
+## ✨ Introducing new features
+- [`37e9195`](https://github.com/zhavir/portfolio-frontend/commit/37e9195)  feature(infrastructure): allow cors to cdn
+
 # [v2.3.0](https://github.com/zhavir/portfolio-frontend/compare/v2.2.0...v2.3.0) 
 
 ## ✨ Introducing new features
