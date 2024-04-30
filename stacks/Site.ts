@@ -43,9 +43,9 @@ function createGateway(
       endpointType: apigateway.EndpointType.EDGE,
       securityPolicy: apigateway.SecurityPolicy.TLS_1_2,
     },
-    //check if it is possible to add it later
+    // not able to find any clean way to get cdn url, there is a circular dependency from gateway to cdn and viceversa
     defaultCorsPreflightOptions: {
-      allowOrigins: [`https://${domainName}`],
+      allowOrigins: [`https://${domainName}`, 'd1xsf9hqyfb7um.cloudfront.net'],
       allowMethods: apigateway.Cors.ALL_METHODS,
       allowHeaders: apigateway.Cors.DEFAULT_HEADERS,
       maxAge: cdk.Duration.days(1),
@@ -118,6 +118,7 @@ export function Site({ stack }) {
       cloudfront.addBehavior('/api/v1/*', new origins.RestApiOrigin(gateway), {
         allowedMethods: cf.AllowedMethods.ALLOW_ALL,
         viewerProtocolPolicy: cf.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+        cachedMethods: cf.CachedMethods.CACHE_GET_HEAD_OPTIONS,
         cachePolicy: new cf.CachePolicy(stack, 'CachePolicy', {
           cachePolicyName: 'ApiBackend',
           maxTtl: cdk.Duration.seconds(0),
