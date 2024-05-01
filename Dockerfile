@@ -1,7 +1,7 @@
 FROM node:21.7.3-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install --ignore-scripts
+RUN --mount=type=cache,target=/app/.npm npm set cache /app/.npm && npm install --ignore-scripts
 
 
 FROM node:21.7.3-alpine AS production
