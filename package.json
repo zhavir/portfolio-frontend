@@ -1,6 +1,6 @@
 {
   "name": "portfolio-frontend",
-  "version": "2.2.0",
+  "version": "2.5.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -42,7 +42,7 @@
     "@semantic-release/release-notes-generator": "^13.0.0",
     "@types/react": "^18.2.77",
     "autoprefixer": "^10.0.1",
-    "aws-cdk-lib": "2.132.1",
+    "aws-cdk-lib": "2.139.1",
     "commitizen": "^4.3.0",
     "commitlint": "^19.2.0",
     "commitlint-config-gitmoji": "^2.3.1",
@@ -51,7 +51,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "cz-gitmoji-adapter": "^2.0.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.4",
+    "eslint-config-next": "14.2.3",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "postcss": "^8",

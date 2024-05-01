@@ -1,5 +1,29 @@
 # Changelog
 
+# [v2.5.1](https://github.com/zhavir/portfolio-frontend/compare/v2.5.0...v2.5.1) 
+
+## 🚀 Deploying stuff
+- [`a460e33`](https://github.com/zhavir/portfolio-frontend/commit/a460e33)  deploy(infrastructure): update dependencies 
+
+## ⬆️ Upgrading dependencies
+- [`36d8f30`](https://github.com/zhavir/portfolio-frontend/commit/36d8f30)  Bump eslint-config-next from 14.1.4 to 14.2.3
+
+# [v2.5.0](https://github.com/zhavir/portfolio-frontend/compare/v2.4.0...v2.5.0) 
+
+## ✨ Introducing new features
+- [`9ef700e`](https://github.com/zhavir/portfolio-frontend/commit/9ef700e)  feature: cleanup form and add animation on submit 
+- [`d284342`](https://github.com/zhavir/portfolio-frontend/commit/d284342)  feature: clean up form and add animation on submit
+
+# [v2.4.0](https://github.com/zhavir/portfolio-frontend/compare/v2.3.0...v2.4.0) 
+
+## ✨ Introducing new features
+- [`37e9195`](https://github.com/zhavir/portfolio-frontend/commit/37e9195)  feature(infrastructure): allow cors to cdn
+
+# [v2.3.0](https://github.com/zhavir/portfolio-frontend/compare/v2.2.0...v2.3.0) 
+
+## ✨ Introducing new features
+- [`fe802b5`](https://github.com/zhavir/portfolio-frontend/commit/fe802b5)  feature(infrastructure): remove infrastructure dependencies
+
 # [v2.2.0](https://github.com/zhavir/portfolio-frontend/compare/v2.1.2...v2.2.0) 
 
 ## ✨ Introducing new features

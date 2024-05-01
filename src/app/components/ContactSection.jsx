@@ -1,11 +1,13 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { sendContactMeEmail } from '../lib/client.js';
+import { motion, useAnimationControls } from 'framer-motion';
 
 const EmailSection = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const formRef = useRef(null);
+  const controls = useAnimationControls();
   const handleSubmit = async (e) => {
     e.preventDefault();
     await sendContactMeEmail(
@@ -14,8 +16,7 @@ const EmailSection = () => {
       e.target.message.value,
     ).then((response) => {
       if (response.status === 201) {
-        console.log(`Message sent`);
-        setEmailSubmitted(true);
+        formRef.current.reset();
       }
     });
   };
@@ -55,7 +56,7 @@ const EmailSection = () => {
         </div>
       </div>
       <div>
-        <form className="flex flex-col" onSubmit={handleSubmit}>
+        <form ref={formRef} className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -107,14 +108,28 @@ const EmailSection = () => {
           <button
             type="submit"
             className="rounded hover:bg-primary-400 bg-primary-600 text-primaryText w-full py-2.5 flex justify-center"
+            onClick={() => {
+              controls.set({ opacity: 0, scale: 1 });
+              controls.start({
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  repeat: 1,
+                  repeatType: 'reverse',
+                  duration: 2,
+                },
+              });
+            }}
           >
             Send Message
           </button>
-          {emailSubmitted && (
-            <p className="text-primary-500 text-sm mt-2 block">
-              Email sent succesfully!
-            </p>
-          )}
+          <motion.p
+            className="text-primary-500 text-sm mt-2 block"
+            initial={{ opacity: 0, scale: 1 }}
+            animate={controls}
+          >
+            Email sent succesfully!
+          </motion.p>
         </form>
       </div>
     </section>
