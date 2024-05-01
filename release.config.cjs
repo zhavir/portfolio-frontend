@@ -146,7 +146,6 @@ module.exports = {
       {
         assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
         message: `${choreMessage}\n\n\${nextRelease.notes}`,
-        // message: choreMessage,
       },
     ],
     '@semantic-release/github',
