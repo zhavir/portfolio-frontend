@@ -1,5 +1,13 @@
 # Changelog
 
+# [v2.5.1](https://github.com/zhavir/portfolio-frontend/compare/v2.5.0...v2.5.1) 
+
+## 🚀 Deploying stuff
+- [`a460e33`](https://github.com/zhavir/portfolio-frontend/commit/a460e33)  deploy(infrastructure): update dependencies 
+
+## ⬆️ Upgrading dependencies
+- [`36d8f30`](https://github.com/zhavir/portfolio-frontend/commit/36d8f30)  Bump eslint-config-next from 14.1.4 to 14.2.3
+
 # [v2.5.0](https://github.com/zhavir/portfolio-frontend/compare/v2.4.0...v2.5.0) 
 
 ## ✨ Introducing new features
