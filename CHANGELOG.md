@@ -1,5 +1,11 @@
 # Changelog
 
+# [v2.5.0](https://github.com/zhavir/portfolio-frontend/compare/v2.4.0...v2.5.0) 
+
+## ✨ Introducing new features
+- [`9ef700e`](https://github.com/zhavir/portfolio-frontend/commit/9ef700e)  feature: cleanup form and add animation on submit 
+- [`d284342`](https://github.com/zhavir/portfolio-frontend/commit/d284342)  feature: clean up form and add animation on submit
+
 # [v2.4.0](https://github.com/zhavir/portfolio-frontend/compare/v2.3.0...v2.4.0) 
 
 ## ✨ Introducing new features
