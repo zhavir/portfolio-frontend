@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.5.4](https://github.com/zhavir/portfolio-frontend/compare/v2.5.3...v2.5.4) 
+
+## 🩹 Simple fix for a non-critical issue
+- [`f6efd27`](https://github.com/zhavir/portfolio-frontend/commit/f6efd27)  adhesive-bandage: remove comment
+
 # [v2.5.3](https://github.com/zhavir/portfolio-frontend/compare/v2.5.2...v2.5.3) 
 
 ## 🩹 Simple fix for a non-critical issue
