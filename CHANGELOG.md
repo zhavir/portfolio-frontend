@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.5.3](https://github.com/zhavir/portfolio-frontend/compare/v2.5.2...v2.5.3) 
+
+## 🩹 Simple fix for a non-critical issue
+- [`548fa73`](https://github.com/zhavir/portfolio-frontend/commit/548fa73)  adhesive-bandage: fix missing asset
+
 # [v2.5.2](https://github.com/zhavir/portfolio-frontend/compare/v2.5.1...v2.5.2) 
 
 ## ⬆️ Upgrading dependencies
