@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.5.2](https://github.com/zhavir/portfolio-frontend/compare/v2.5.1...v2.5.2) 
+
+## ⬆️ Upgrading dependencies
+- [`0e67105`](https://github.com/zhavir/portfolio-frontend/commit/0e67105)  Bump tailwindcss from 3.4.1 to 3.4.3
+
 # [v2.5.1](https://github.com/zhavir/portfolio-frontend/compare/v2.5.0...v2.5.1) 
 
 ## 🚀 Deploying stuff
