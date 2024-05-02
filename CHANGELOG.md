@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.5.5](https://github.com/zhavir/portfolio-frontend/compare/v2.5.4...v2.5.5) 
+
+## ⚡️ Improving performance
+- [`0b27c42`](https://github.com/zhavir/portfolio-frontend/commit/0b27c42)  perf: decrease number of calls and improve error handling
+
 # [v2.5.4](https://github.com/zhavir/portfolio-frontend/compare/v2.5.3...v2.5.4) 
 
 ## 🩹 Simple fix for a non-critical issue
