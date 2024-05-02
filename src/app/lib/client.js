@@ -6,6 +6,9 @@ const instance = axios.create({
     : '/api/v1',
   timeout: 10000,
   headers: { 'Content-Type': 'application/json' },
+  validateStatus: (status) => {
+    return status >= 200 && status < 300;
+  },
 });
 
 export async function sendContactMeEmail(emailFrom, subject, text) {
@@ -14,17 +17,9 @@ export async function sendContactMeEmail(emailFrom, subject, text) {
     subject: subject,
     text: text,
   };
-  try {
-    return await instance.post('/contact-me/', data);
-  } catch (error) {
-    console.log(`unable to send email ${error}`);
-  }
+  return await instance.post('/contact-me/', data);
 }
 
 export async function generateCurriculum() {
-  try {
-    return await instance.post('/curriculum/');
-  } catch (error) {
-    console.log(`unable to generate curriculum ${error}`);
-  }
+  return await instance.post('/curriculum/');
 }

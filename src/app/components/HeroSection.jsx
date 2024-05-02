@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
@@ -8,16 +8,24 @@ import { generateCurriculum } from '../lib/client';
 const HeroSection = () => {
   const [hasCvDownloaded, setHasCvDownloaded] = useState(false);
   const [downloadLink, setDownloadLink] = useState();
+  const initialized = useRef(false);
 
   useEffect(() => {
     const getDownloadLink = async () => {
-      await generateCurriculum().then((response) => {
-        if (response.status === 200) {
-          setDownloadLink(response.data.download_link);
-        }
-      });
+      await generateCurriculum()
+        .then((response) => {
+          if (response) {
+            setDownloadLink(response.data.download_link);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     };
-    getDownloadLink();
+    if (!initialized.current) {
+      initialized.current = true;
+      getDownloadLink();
+    }
   });
 
   return (

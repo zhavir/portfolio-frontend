@@ -14,11 +14,25 @@ const EmailSection = () => {
       e.target.email.value,
       e.target.subject.value,
       e.target.message.value,
-    ).then((response) => {
-      if (response.status === 201) {
+    )
+      .then((_) => {
         formRef.current.reset();
-      }
-    });
+      })
+      .then((_) => {
+        controls.set({ opacity: 0, scale: 1 });
+        controls.start({
+          opacity: 1,
+          scale: 1,
+          transition: {
+            repeat: 1,
+            repeatType: 'reverse',
+            duration: 2,
+          },
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <section
@@ -108,18 +122,6 @@ const EmailSection = () => {
           <button
             type="submit"
             className="rounded hover:bg-primary-400 bg-primary-600 text-primaryText w-full py-2.5 flex justify-center"
-            onClick={() => {
-              controls.set({ opacity: 0, scale: 1 });
-              controls.start({
-                opacity: 1,
-                scale: 1,
-                transition: {
-                  repeat: 1,
-                  repeatType: 'reverse',
-                  duration: 2,
-                },
-              });
-            }}
           >
             Send Message
           </button>
