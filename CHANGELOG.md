@@ -1,5 +1,10 @@
 # Changelog
 
+# [v2.6.0](https://github.com/zhavir/portfolio-frontend/compare/v2.5.5...v2.6.0) 
+
+## ✨ Introducing new features
+- [`0d5b813`](https://github.com/zhavir/portfolio-frontend/commit/0d5b813)  feature: add form validation
+
 # [v2.5.5](https://github.com/zhavir/portfolio-frontend/compare/v2.5.4...v2.5.5) 
 
 ## ⚡️ Improving performance
