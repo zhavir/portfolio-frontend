@@ -1,13 +1,37 @@
 'use client';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { sendContactMeEmail } from '../lib/client.js';
 import { motion, useAnimationControls } from 'framer-motion';
 
 const EmailSection = () => {
+  const [messageSent, setMessageSent] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [subject, setSubject] = useState(null);
+  const [message, setMessage] = useState(null);
+  const [errors, setErrors] = useState({
+    email: '',
+  });
   const formRef = useRef(null);
   const controls = useAnimationControls();
+  const [isValidForm, setIsValidForm] = useState(false);
+
+  const validateForm = () => {
+    let tmp = {};
+    let anyError = false;
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      tmp.email = 'Email is invalid.';
+      anyError = true;
+    } else {
+      tmp.email = '';
+    }
+    if (!subject || !message || !email) {
+      anyError = true;
+    }
+    setErrors(tmp);
+    setIsValidForm(!anyError);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     await sendContactMeEmail(
@@ -16,24 +40,36 @@ const EmailSection = () => {
       e.target.message.value,
     )
       .then((_) => {
+        setMessageSent(false);
         formRef.current.reset();
-      })
-      .then((_) => {
-        controls.set({ opacity: 0, scale: 1 });
-        controls.start({
-          opacity: 1,
-          scale: 1,
-          transition: {
-            repeat: 1,
-            repeatType: 'reverse',
-            duration: 2,
-          },
-        });
+        setEmail(null);
+        setSubject(null);
+        setMessage(null);
+        setIsValidForm(false);
       })
       .catch((err) => {
+        setMessageSent(true);
         console.log(err);
       });
   };
+  useEffect(() => {
+    if (email !== null || subject !== null || message !== null) {
+      validateForm();
+    }
+    if (messageSent !== null && !messageSent) {
+      controls.set({ opacity: 0, scale: 1 });
+      controls.start({
+        opacity: 1,
+        scale: 1,
+        transition: {
+          repeat: 1,
+          repeatType: 'reverse',
+          duration: 2,
+        },
+      });
+      setMessageSent(null);
+    }
+  }, [messageSent, email, subject, message]);
   return (
     <section
       id="contact"
@@ -78,6 +114,9 @@ const EmailSection = () => {
             >
               Your email
             </label>
+            {errors.email && (
+              <p className="text-red-500 text-sm mb-2 block">{errors.email}</p>
+            )}
             <input
               name="email"
               type="text"
@@ -85,6 +124,7 @@ const EmailSection = () => {
               required
               className="bg-secondaryBackgroud border border-primaryBorder placeholder-primaryPlaceholder text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="lorem@ipsum.com"
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="mb-6">
@@ -101,6 +141,7 @@ const EmailSection = () => {
               required
               className="bg-secondaryBackgroud border border-primaryBorder placeholder-primaryPlaceholder text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Just saying hi"
+              onChange={(e) => setSubject(e.target.value)}
             />
           </div>
           <div className="mb-6">
@@ -114,24 +155,32 @@ const EmailSection = () => {
               name="message"
               id="message"
               required
-              rows="10"
+              rows={10}
               className="bg-secondaryBackgroud border border-primaryBorder placeholder-primaryPlaceholder text-gray-100 text-sm rounded-lg block w-full p-2.5"
               placeholder="Leave your message here..."
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="rounded hover:bg-primary-400 bg-primary-600 text-primaryText w-full py-2.5 flex justify-center"
+            className={`rounded ${isValidForm ? 'hover:bg-primary-400' : ''} bg-primary-600 text-primaryText w-full py-2.5 flex justify-center`}
+            disabled={!isValidForm}
           >
             Send Message
           </button>
-          <motion.p
-            className="text-primary-500 text-sm mt-2 block"
-            initial={{ opacity: 0, scale: 1 }}
-            animate={controls}
-          >
-            Email sent succesfully!
-          </motion.p>
+          {messageSent ? (
+            <p className="text-red-500 text-sm mt-2 block">
+              ❌ Message not set, sorry!
+            </p>
+          ) : (
+            <motion.p
+              className="text-primary-500 text-sm mt-2 block"
+              initial={{ opacity: 0, scale: 1 }}
+              animate={controls}
+            >
+              ✅ Email sent succesfully!
+            </motion.p>
+          )}
         </form>
       </div>
     </section>
