@@ -50,7 +50,7 @@
     "conventional-changelog-gitmoji-config": "^1.5.2",
     "cz-conventional-changelog": "^3.3.0",
     "cz-gitmoji-adapter": "^2.0.0",
-    "eslint": "^8",
+    "eslint": "^9",
     "eslint-config-next": "14.2.3",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
